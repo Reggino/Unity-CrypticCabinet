@@ -5184,6 +5184,10 @@ PrefabInstance:
       propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8940659897447410198, guid: bc0484c55be0d2f4e926d94ded65ed24, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
