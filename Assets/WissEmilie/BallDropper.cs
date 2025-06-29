@@ -14,14 +14,16 @@ public class OVRControllerLogger : MonoBehaviour
             if (volleyball != null)
             {
                 volleyball.SetActive(true);
+                Vector3 leftControllerPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch);
+                volleyball.transform.position = leftControllerPosition;
             }
 
-                        OVRInput.Controller leftController = OVRInput.Controller.LTouch;
-                        OVRInput.SetControllerVibration(0, 0, leftController);
-                        GameObject leftControllerObject = GameObject.Find("OculusHandController_L");
-                        if (leftControllerObject != null)
-                        {
-                            leftControllerObject.SetActive(false);
-                        }
+            OVRInput.Controller leftController = OVRInput.Controller.LTouch;
+            OVRInput.SetControllerVibration(0, 0, leftController);
+            GameObject leftControllerObject = GameObject.Find("OculusHandController_L");
+            if (leftControllerObject != null)
+            {
+                leftControllerObject.SetActive(false);
+            }
         }
 }
