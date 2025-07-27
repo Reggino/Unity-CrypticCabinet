@@ -26,7 +26,7 @@ namespace CrypticCabinet.UI.Modal
         /// <param name="hostAction">The callback to run when the Host button is clicked.</param>
         /// <param name="joinAction">The callback to run when the Join button is clicked.</param>
         /// <param name="defaultRoomName">[Optional] the default room name to join.</param>
-        public void Initialize(Action<string> hostAction, Action<string> joinAction, string defaultRoomName = null)
+        public void Initialize(Action<string> hostAction, Action<string> joinAction, string defaultRoomName = "WissEmilie")
         {
             if (!string.IsNullOrWhiteSpace(defaultRoomName))
             {
@@ -34,6 +34,8 @@ namespace CrypticCabinet.UI.Modal
             }
             m_hostAction = hostAction;
             m_joinAction = joinAction;
+            
+            OnHostClicked();
         }
 
         /// <summary>
