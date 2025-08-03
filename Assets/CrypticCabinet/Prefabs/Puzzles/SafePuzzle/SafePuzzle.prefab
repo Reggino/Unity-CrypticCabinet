@@ -2349,7 +2349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4261131603962030512
 Transform:
   m_ObjectHideFlags: 0
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   DestroyWhenStateAuthorityLeaves: 0
   AllowStateAuthorityOverride: 1
   AoiPositionSource: {fileID: 0}
-  Flags: 3073
+  Flags: 134145
   NetworkGuid:
     RawGuidValue: 00000000000000000000000000000000
   NestedObjects: []
@@ -5183,10 +5183,6 @@ PrefabInstance:
     - target: {fileID: 7013347775681172935, guid: bc0484c55be0d2f4e926d94ded65ed24, type: 3}
       propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8940659897447410198, guid: bc0484c55be0d2f4e926d94ded65ed24, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
