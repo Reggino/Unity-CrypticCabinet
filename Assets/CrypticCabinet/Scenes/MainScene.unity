@@ -1619,10 +1619,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5221299228607451723, guid: a37155f7bf534ad489b9a243e0f52256, type: 3}
-      propertyPath: m_text
-      value: Start spel
-      objectReference: {fileID: 0}
     - target: {fileID: 5455202830620940646, guid: a37155f7bf534ad489b9a243e0f52256, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
