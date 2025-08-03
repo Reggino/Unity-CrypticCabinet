@@ -3324,22 +3324,6 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: GeneratorSchematic1
-    DisplayPrefab: {fileID: 7614037581535387453, guid: 252378c6116ae6042b1a92f07297b8c6, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: GeneratorSchematics2
-    DisplayPrefab: {fileID: 7614037581535387453, guid: 95e970e2f1f11474b835cfc9805a22a9, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
   m_deskObject:
   - ObjectName: Bucket
     DisplayPrefab: {fileID: 6914272609573309702, guid: f30b3420a62ba1d49be29d8da3875f33, type: 3}
