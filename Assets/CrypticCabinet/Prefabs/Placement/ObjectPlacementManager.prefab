@@ -3340,41 +3340,9 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: UVClue
-    DisplayPrefab: {fileID: 7614037581535387453, guid: 42cd04377e79c15499d5760d6748710a, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: UVText1
-    DisplayPrefab: {fileID: 7614037581535387453, guid: 77add5682c1b70148979cf1fb901202b, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: UVText2
-    DisplayPrefab: {fileID: 7614037581535387453, guid: 7de2f377c0b4cf142be0fb0cab397e0c, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: UVText3
-    DisplayPrefab: {fileID: 7614037581535387453, guid: 8605b1f435a723b4bbb1040de6be014b, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
   m_deskObject:
-  - ObjectName: UV Machine
-    DisplayPrefab: {fileID: 7185608751774053190, guid: f0cb1a526dea4ab45a32d0f4d8d06810, type: 3}
+  - ObjectName: Bucket
+    DisplayPrefab: {fileID: 6914272609573309702, guid: f30b3420a62ba1d49be29d8da3875f33, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -3407,14 +3375,6 @@ MonoBehaviour:
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
   m_anyHorizontalObject:
-  - ObjectName: Bucket
-    DisplayPrefab: {fileID: 6914272609573309702, guid: f30b3420a62ba1d49be29d8da3875f33, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
   - ObjectName: MiniGenSmall
     DisplayPrefab: {fileID: 2317251364401837250, guid: a26d28aa593c083439e7a95fee1e9012, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}

@@ -1345,10 +1345,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3365269623673707068, guid: b7e6d6ce96997c24b93b1fbd19ea3fa9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 425508343642592397, guid: b7e6d6ce96997c24b93b1fbd19ea3fa9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1f4c7a4ac9cc48f44a2731d173467cdb, type: 2}
+    - target: {fileID: 669490207740643614, guid: b7e6d6ce96997c24b93b1fbd19ea3fa9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e6d6ce96997c24b93b1fbd19ea3fa9, type: 3}
       propertyPath: m_Name
       value: openDoors_cabinet-anm
