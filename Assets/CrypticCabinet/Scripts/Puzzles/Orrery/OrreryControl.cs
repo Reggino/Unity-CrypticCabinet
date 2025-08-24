@@ -80,7 +80,6 @@ namespace CrypticCabinet.Puzzles.Orrery
             [HideInInspector] public Collider SwitchCollider;
             public int ButtonIndex;
             public List<PlanetRotation> PlanetRotations;
-            public bool ButtonCorrectAnswerState;
             [HideInInspector] public bool Applied;
         }
 
@@ -109,7 +108,8 @@ namespace CrypticCabinet.Puzzles.Orrery
 
         private bool PlanetMotionEnabled()
         {
-            return m_placedPlanetsCorrect && !m_buttonsInCorrectOrder;
+            // return m_placedPlanetsCorrect && !m_buttonsInCorrectOrder;
+            return true;
         }
 
         private void ApplyRotation(int buttonIndex)
@@ -175,19 +175,21 @@ namespace CrypticCabinet.Puzzles.Orrery
 
         private void ResetPlanets(bool toggled)
         {
-            if (PlanetMotionEnabled() && toggled)
-            {
-                if (m_resetPlanetsTask.Status != UniTaskStatus.Pending &&
-                    m_planetMovementProcessingTask.Status != UniTaskStatus.Pending)
-                {
-                    m_resetPlanetsTask = ResetPlanetsAsync();
-                    m_orreryAudio.Play();
-                }
-            }
-            else
-            {
-                m_reset.SetSwitchState(false, true);
-            }
+            // if (PlanetMotionEnabled() && toggled)
+            // {
+            //     if (m_resetPlanetsTask.Status != UniTaskStatus.Pending &&
+            //         m_planetMovementProcessingTask.Status != UniTaskStatus.Pending)
+            //     {
+            //         m_resetPlanetsTask = ResetPlanetsAsync();
+            //         m_orreryAudio.Play();
+            //     }
+            // }
+            // else
+            // {
+            //     m_reset.SetSwitchState(false, true);
+            // }
+            ApplyRotation(0);
+            StartOrreryClickAudioRpc();
         }
 
         private async UniTask ResetPlanetsAsync()
@@ -303,21 +305,22 @@ namespace CrypticCabinet.Puzzles.Orrery
 
         private void CheckCorrectState()
         {
-            var fireAudio = m_planetReference.Any(
-                data => (Mathf.Abs(data.TargetAngle - data.CurrentAngle) < 0.05f) &&
-                        (Mathf.Abs(data.CurrentAngle - data.LastAngle) > 0.001f) &&
-                        m_audioTrackedPlanets.Contains(data.Planet));
+            // var fireAudio = m_planetReference.Any(
+            //     data => (Mathf.Abs(data.TargetAngle - data.CurrentAngle) < 0.05f) &&
+            //             (Mathf.Abs(data.CurrentAngle - data.LastAngle) > 0.001f) &&
+            //             m_audioTrackedPlanets.Contains(data.Planet));
+            var fireAudio = true;
 
             if (fireAudio && m_planetCorrectAudio != null)
             {
                 m_planetCorrectAudio.Play();
             }
 
-            if (m_buttonAffects.All(data => data.Applied == data.ButtonCorrectAnswerState))
-            {
+            // if (m_buttonAffects.All(data => data.Applied == data.ButtonCorrectAnswerState))
+            // {
                 m_buttonsInCorrectOrder = true;
                 OpenOrreryDrawRpc();
-            }
+            // }
         }
 
         /// <summary>
