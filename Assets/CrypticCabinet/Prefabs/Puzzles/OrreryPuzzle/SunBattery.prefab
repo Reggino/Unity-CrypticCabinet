@@ -2353,7 +2353,7 @@ GameObject:
   - component: {fileID: 7120492801060263348}
   - component: {fileID: 8845004690076448535}
   m_Layer: 0
-  m_Name: Sun
+  m_Name: SunBattery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
