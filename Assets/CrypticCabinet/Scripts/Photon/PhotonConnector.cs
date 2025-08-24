@@ -580,7 +580,7 @@ namespace CrypticCabinet.Photon
                 // check if the desired game session is available and accessible.
                 // If the user clicks on the button "Back", the guest leaves the lobby.
                 UISystem.Instance.ShowMessageWithOneButton(
-                    $"Joined lobby for game '{roomToSearch}', waiting for game session to start...",
+                    $"Even geduld...",
                     "Back",
                     () =>
                     {

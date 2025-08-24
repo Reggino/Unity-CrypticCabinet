@@ -43,18 +43,11 @@ namespace CrypticCabinet.Utils
             MINI_GENERATOR_SMALL,
             MAIN_GENERATOR,
             MAIN_GENERATOR_COIL,
-            GENERATOR_SCHEMATIC1,
             DIRECTIONAL_APPARATUS,
             MINI_GENERATOR_MEDIUM,
             MINI_GENERATOR_LARGE,
             ATLAS_STATUE,
-            LIGHT_BULB_UV_MACHINE,
-            UV_SIGN_CLUE,
-            UV_SIGN_TEXT1,
-            UV_SIGN_TEXT2,
-            UV_SIGN_TEXT3,
-            SAFE_PUZZLE,
-            GENERATOR_SCHEMATIC2
+            SAFE_PUZZLE
         }
 
         [Serializable]
