@@ -643,10 +643,10 @@ MonoBehaviour:
   m_planetReference:
   - Planet: 6
     Position: {fileID: 8130996032554241565}
-    InitialAngle: 0
+    InitialAngle: 90
     MotionTime: 5
     CurrentAngle: 0
-    LastAngle: 380
+    LastAngle: 390
     TargetAngle: 0
   m_buttonAffects:
   - ToggleSwitch: {fileID: 8977262649986725656}
@@ -654,7 +654,7 @@ MonoBehaviour:
     ButtonIndex: 0
     PlanetRotations:
     - Planet: 6
-      Angle: 380
+      Angle: 390
     Applied: 0
 --- !u!114 &2856427522904117376
 MonoBehaviour:
