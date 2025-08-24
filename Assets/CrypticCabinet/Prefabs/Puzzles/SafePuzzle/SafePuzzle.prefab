@@ -5174,7 +5174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7013347775681172935, guid: bc0484c55be0d2f4e926d94ded65ed24, type: 3}
       propertyPath: Flags
-      value: 3073
+      value: 134145
       objectReference: {fileID: 0}
     - target: {fileID: 7013347775681172935, guid: bc0484c55be0d2f4e926d94ded65ed24, type: 3}
       propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
@@ -5182,6 +5182,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7013347775681172935, guid: bc0484c55be0d2f4e926d94ded65ed24, type: 3}
       propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940659897447410198, guid: bc0484c55be0d2f4e926d94ded65ed24, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6077,7 +6081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2051140696233445092, guid: 6f4fc6b9d85c8814f8915e5bc055ec6c, type: 3}
       propertyPath: Flags
-      value: 3073
+      value: 134145
       objectReference: {fileID: 0}
     - target: {fileID: 2051140696233445092, guid: 6f4fc6b9d85c8814f8915e5bc055ec6c, type: 3}
       propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
@@ -6101,6 +6105,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5687581739430433839, guid: 6f4fc6b9d85c8814f8915e5bc055ec6c, type: 3}
       propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695245081959823157, guid: 6f4fc6b9d85c8814f8915e5bc055ec6c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8121323670700356258, guid: 6f4fc6b9d85c8814f8915e5bc055ec6c, type: 3}
