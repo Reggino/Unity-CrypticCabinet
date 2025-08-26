@@ -92,7 +92,7 @@ namespace CrypticCabinet.Puzzles.Orrery
 
         private readonly List<OrreryPlanetSocket> m_planetSockets = new();
         private bool m_placedPlanetsCorrect;
-        private bool m_buttonsInCorrectOrder;
+        // private bool m_buttonsInCorrectOrder;
 
         private void Start()
         {
@@ -318,7 +318,7 @@ namespace CrypticCabinet.Puzzles.Orrery
 
             // if (m_buttonAffects.All(data => data.Applied == data.ButtonCorrectAnswerState))
             // {
-                m_buttonsInCorrectOrder = true;
+                // m_buttonsInCorrectOrder = true;
                 OpenOrreryDrawRpc();
             // }
         }

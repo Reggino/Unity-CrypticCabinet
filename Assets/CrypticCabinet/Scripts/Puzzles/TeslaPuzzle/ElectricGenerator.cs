@@ -149,36 +149,36 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
             }
 
             // Look for closest generator not yet connected, within the range.
-            ElectricGenerator candidate = null;
-            var minDistance = float.MaxValue;
-            var currentPosition = transform.position;
-            var foundValidTarget = false;
-            foreach (var miniGenerator in m_manager.MiniGenerators)
-            {
-                if (miniGenerator.m_electricGeneratorId == m_electricGeneratorId)
-                {
-                    continue;
-                }
-
-                var position = miniGenerator.transform.position;
-                var distance = Vector3.Distance(currentPosition, position);
-                if (distance < minDistance && miniGenerator.m_connectedGenerator != this && miniGenerator.IsElectricityEnabled)
-                {
-                    minDistance = distance;
-                    candidate = miniGenerator;
-                    foundValidTarget = true;
-                }
-            }
-
-            if (foundValidTarget)
-            {
-                m_connectedGenerator = candidate;
-                m_electricArtEnd.position = m_connectedGenerator.m_electricArcStart.position;
-                m_electricityVfx.SetBool(VISUAL_EFFECT_STRONG_NAME, true);
-                m_electricityVfx.SetBool(VISUAL_EFFECT_CONNECT_NAME, true);
-                m_miniGeneratorAudioScript.ChangeClip(true);
-                return;
-            }
+            // ElectricGenerator candidate = null;
+            // var minDistance = float.MaxValue;
+            // var currentPosition = transform.position;
+            // var foundValidTarget = false;
+            // foreach (var miniGenerator in m_manager.MiniGenerators)
+            // {
+            //     if (miniGenerator.m_electricGeneratorId == m_electricGeneratorId)
+            //     {
+            //         continue;
+            //     }
+            //
+            //     var position = miniGenerator.transform.position;
+            //     var distance = Vector3.Distance(currentPosition, position);
+            //     if (distance < minDistance && miniGenerator.m_connectedGenerator != this && miniGenerator.IsElectricityEnabled)
+            //     {
+            //         minDistance = distance;
+            //         candidate = miniGenerator;
+            //         foundValidTarget = true;
+            //     }
+            // }
+            //
+            // if (foundValidTarget)
+            // {
+            //     m_connectedGenerator = candidate;
+            //     m_electricArtEnd.position = m_connectedGenerator.m_electricArcStart.position;
+            //     m_electricityVfx.SetBool(VISUAL_EFFECT_STRONG_NAME, true);
+            //     m_electricityVfx.SetBool(VISUAL_EFFECT_CONNECT_NAME, true);
+            //     m_miniGeneratorAudioScript.ChangeClip(true);
+            //     return;
+            // }
 
             m_electricityVfx.SetBool(VISUAL_EFFECT_STRONG_NAME, false);
             m_electricityVfx.SetBool(VISUAL_EFFECT_CONNECT_NAME, false);

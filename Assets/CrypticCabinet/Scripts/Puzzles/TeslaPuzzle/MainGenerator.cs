@@ -140,17 +140,15 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
                 // Ensure the total voltage of the enabled generators is matching the threshold.
                 // If it does, switch on, otherwise edge cases.
                 m_currentVoltage = 0;
-                foreach (var generator in m_manager.MiniGenerators)
-                {
-                    m_currentVoltage += generator.IsSwitchedOn() && generator.IsInPlace ? generator.Voltage : 0;
-                }
+   
                 // Clamp the voltage between min and max allowed by main generator
                 m_currentVoltage = Mathf.Clamp(m_currentVoltage, m_minVoltage, m_maxVoltage);
 
-                if (m_lastVoltage != m_currentVoltage)
+                if (!IsMainGeneratorEnabled && IsDirectionalApparatusInRange())
                 {
                     UpdateVoltageMeasurement();
                     UpdateDirectionalApparatusStatus();
+                    SwitchOn();
                 }
             }
             else
@@ -306,11 +304,11 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
 
                 // Over voltage
                 Debug.Log("Main generator has too much voltage, switching off all generators");
-                // Switch off all other generators
-                foreach (var generator in m_manager.MiniGenerators)
-                {
-                    generator.SwitchOff();
-                }
+                // // Switch off all other generators
+                // foreach (var generator in m_manager.MiniGenerators)
+                // {
+                //     generator.SwitchOff();
+                // }
                 // Switch off main generator too
                 if (IsMainGeneratorEnabled)
                 {
