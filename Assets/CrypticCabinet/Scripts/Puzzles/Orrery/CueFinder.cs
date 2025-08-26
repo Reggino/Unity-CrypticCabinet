@@ -24,6 +24,16 @@ namespace CrypticCabinet.Puzzles.Orrery
 
             return true;
         }
+        
+        public bool FindCueGetActiveState()
+        {
+            if (m_orreryClueControl != null || TryGetCueGO())
+            {
+                return m_orreryClueControl.IsCueActive();
+            }
+
+            return false;
+        }
 
         public void FindCueSetActiveState(bool activeState)
         {

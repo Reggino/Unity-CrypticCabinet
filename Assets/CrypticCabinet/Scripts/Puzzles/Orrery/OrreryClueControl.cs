@@ -64,6 +64,8 @@ namespace CrypticCabinet.Puzzles.Orrery
             m_cueAnimator.SetFloat(m_animationParameterHash, 0.0f);
         }
 
+        public bool IsCueActive() => m_desiredState;
+
         public void SetCueSate(bool isCueEnabled)
         {
             if (m_desiredState != isCueEnabled)

@@ -29,6 +29,31 @@ namespace CrypticCabinet.Puzzles.Orrery
         [SerializeField] private List<Planets> m_audioTrackedPlanets = new();
         [SerializeField] private float m_audioStopDelayTime;
         [SerializeField] private GameObject m_directionalApparatus;
+        
+        private OrreryClueControl m_orreryClueControl;
+
+        
+        private bool TryGetCueGO()
+        {
+            m_orreryClueControl = FindObjectOfType<OrreryClueControl>(true);
+            if (m_orreryClueControl == null)
+            {
+                Debug.LogError("CueFinder could not find GO with CueMarker component");
+                return false;
+            }
+
+            return true;
+        }
+        
+        public bool FindCueGetActiveState()
+        {
+            if (m_orreryClueControl != null || TryGetCueGO())
+            {
+                return m_orreryClueControl.IsCueActive();
+            }
+
+            return false;
+        }
 
         /// <summary>
         ///     Identify the specific planet of the orrery.
@@ -98,18 +123,12 @@ namespace CrypticCabinet.Puzzles.Orrery
         {
             InitPlanetData();
             InitButtons();
-            m_reset.SwitchToggled.AddListener(ResetPlanets);
+            // m_reset.SwitchToggled.AddListener(ResetPlanets);
         }
 
         private void OnDestroy()
         {
-            m_reset.SwitchToggled.RemoveListener(ResetPlanets);
-        }
-
-        private bool PlanetMotionEnabled()
-        {
-            // return m_placedPlanetsCorrect && !m_buttonsInCorrectOrder;
-            return true;
+            // m_reset.SwitchToggled.RemoveListener(ResetPlanets);
         }
 
         private void ApplyRotation(int buttonIndex)
@@ -173,24 +192,29 @@ namespace CrypticCabinet.Puzzles.Orrery
         }
 
 
-        private void ResetPlanets(bool toggled)
-        {
-            // if (PlanetMotionEnabled() && toggled)
-            // {
-            //     if (m_resetPlanetsTask.Status != UniTaskStatus.Pending &&
-            //         m_planetMovementProcessingTask.Status != UniTaskStatus.Pending)
-            //     {
-            //         m_resetPlanetsTask = ResetPlanetsAsync();
-            //         m_orreryAudio.Play();
-            //     }
-            // }
-            // else
-            // {
-            //     m_reset.SetSwitchState(false, true);
-            // }
-            ApplyRotation(0);
-            StartOrreryClickAudioRpc();
-        }
+        // private void ResetPlanets(bool toggled)
+        // {
+        //     // if (PlanetMotionEnabled() && toggled)
+        //     // {
+        //     //     if (m_resetPlanetsTask.Status != UniTaskStatus.Pending &&
+        //     //         m_planetMovementProcessingTask.Status != UniTaskStatus.Pending)
+        //     //     {
+        //     //         m_resetPlanetsTask = ResetPlanetsAsync();
+        //     //         m_orreryAudio.Play();
+        //     //     }
+        //     // }
+        //     // else
+        //     // {
+        //     //     m_reset.SetSwitchState(false, true);
+        //     // }
+        //     if (!FindCueGetActiveState())
+        //     {
+        //         return;
+        //     }
+        //     
+        //     ApplyRotation(0);
+        //     StartOrreryClickAudioRpc();
+        // }
 
         private async UniTask ResetPlanetsAsync()
         {
@@ -250,14 +274,9 @@ namespace CrypticCabinet.Puzzles.Orrery
                 buttonAffectData.ToggleSwitch.SwitchToggled.AddListener(
                     _ =>
                     {
-                        if (PlanetMotionEnabled())
-                        {
+                        if (FindCueGetActiveState()) {
                             ApplyRotation(buttonAffectData.ButtonIndex);
                             StartOrreryClickAudioRpc();
-                        }
-                        else
-                        {
-                            buttonAffectData.ToggleSwitch.SetSwitchState(buttonAffectData.Applied, true);
                         }
                     });
                 buttonAffectData.SwitchCollider = buttonAffectData.ToggleSwitch.GetComponentInChildren<Collider>();
@@ -309,18 +328,17 @@ namespace CrypticCabinet.Puzzles.Orrery
             //     data => (Mathf.Abs(data.TargetAngle - data.CurrentAngle) < 0.05f) &&
             //             (Mathf.Abs(data.CurrentAngle - data.LastAngle) > 0.001f) &&
             //             m_audioTrackedPlanets.Contains(data.Planet));
-            var fireAudio = true;
+            var isOk = m_planetSockets[0].PlanetCorrect;
 
-            if (fireAudio && m_planetCorrectAudio != null)
+            if (isOk)
             {
-                m_planetCorrectAudio.Play();
-            }
-
-            // if (m_buttonAffects.All(data => data.Applied == data.ButtonCorrectAnswerState))
-            // {
-                // m_buttonsInCorrectOrder = true;
+                if (m_planetCorrectAudio != null)
+                {
+                    m_planetCorrectAudio.Play();
+                }
                 OpenOrreryDrawRpc();
-            // }
+            }
+                // }
         }
 
         /// <summary>
