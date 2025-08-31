@@ -714,6 +714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volleyball: {fileID: 1916879226}
+  visualController: {fileID: 1665240727}
 --- !u!1 &711026365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1108,11 @@ Transform:
   - {fileID: 705697066}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1665240727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4423471876160075859, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
+  m_PrefabInstance: {fileID: 7847888770016454835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1728183867
 GameObject:
   m_ObjectHideFlags: 0
