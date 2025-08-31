@@ -34,8 +34,6 @@ namespace CrypticCabinet.UI.Modal
             }
             m_hostAction = hostAction;
             m_joinAction = joinAction;
-            
-            OnHostClicked();
         }
 
         /// <summary>
