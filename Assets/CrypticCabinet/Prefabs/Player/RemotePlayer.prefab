@@ -167,19 +167,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   m_onPlayerNameChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 999581077488022741}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_onIsMasterClientChanged:
     m_PersistentCalls:
       m_Calls:
@@ -292,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4182386674285676329, guid: b13932f5ae5c9ae4488101b7b08f2d3e, type: 3}
       propertyPath: m_text
-      value: User name
+      value: Lief
       objectReference: {fileID: 0}
     - target: {fileID: 4182386674285676329, guid: b13932f5ae5c9ae4488101b7b08f2d3e, type: 3}
       propertyPath: m_fontAsset
@@ -307,17 +295,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13932f5ae5c9ae4488101b7b08f2d3e, type: 3}
---- !u!114 &999581077488022741 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4182386674285676329, guid: b13932f5ae5c9ae4488101b7b08f2d3e, type: 3}
-  m_PrefabInstance: {fileID: 4023380454013940732}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2226972439204592647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2968470935937470459, guid: b13932f5ae5c9ae4488101b7b08f2d3e, type: 3}
