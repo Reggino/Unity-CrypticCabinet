@@ -20,7 +20,7 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
         /// <summary>
         ///     For this scenario, we only have three mini generators.
         /// </summary>
-        private const int NUMBER_OF_MINI_GENERATORS = 3;
+        // private const int NUMBER_OF_MINI_GENERATORS = 3;
 
         /// <summary>
         ///     For this scenario, we only have one directional apparatus.
@@ -30,7 +30,7 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
         /// <summary>
         ///     List of all mini generators available in the scene.
         /// </summary>
-        public List<ElectricGenerator> MiniGenerators;
+        // public List<ElectricGenerator> MiniGenerators;
 
         /// <summary>
         ///     Reference to the main generator in the scene.
@@ -49,17 +49,6 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
             if (m_initSuccessful)
             {
                 return;
-            }
-
-            if (MiniGenerators.Count == 0)
-            {
-                var miniGenerators = FindObjectsOfType<ElectricGenerator>();
-
-                // Once we find all mini generators, we add them to our references
-                if (miniGenerators.Length == NUMBER_OF_MINI_GENERATORS)
-                {
-                    MiniGenerators.AddRange(miniGenerators);
-                }
             }
 
             if (MainGenerator == null)
@@ -87,8 +76,7 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
             }
 
             // Check if all references have been found
-            m_initSuccessful = MiniGenerators.Count == NUMBER_OF_MINI_GENERATORS
-                               && DirectionalApparatus != null && MainGenerator != null;
+            m_initSuccessful = DirectionalApparatus != null && MainGenerator != null;
 
             if (!m_initSuccessful)
             {
@@ -99,11 +87,6 @@ namespace CrypticCabinet.Puzzles.TeslaPuzzle
             if (MainGenerator != null)
             {
                 MainGenerator.InjectElectricGeneratorManager(this);
-            }
-
-            foreach (var miniGenerator in MiniGenerators)
-            {
-                miniGenerator.InjectElectricGeneratorManager(this);
             }
         }
     }

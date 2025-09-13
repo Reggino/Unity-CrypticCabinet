@@ -1,32 +1,31 @@
 using UnityEngine;
 
-public class OVRControllerLogger : MonoBehaviour
+namespace WissEmilie
 {
-    public GameObject volleyball;
-    
-    void Update()
+    public class BallDropper : MonoBehaviour
     {
-        // Check for button presses and log all data
-        if (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Two) ||
-            OVRInput.GetDown(OVRInput.Button.Three) || OVRInput.GetDown(OVRInput.Button.Four) ||
-            OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) ||
-            OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) ||
-            OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger) ||
-            OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger))
+        public GameObject volleyball;
+        public GameObject visualController;
+
+        void Update()
         {
-            if (volleyball != null)
+            // Handle right trigger press to show left hand controller
+            if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) ||
+                OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger))
+            {
+                visualController.SetActive(true);
+            }
+
+            // Check for button presses to handle volleyball
+            if (
+                OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) ||
+                OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger)
+            )
             {
                 volleyball.SetActive(true);
                 Vector3 leftControllerPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch);
                 volleyball.transform.position = leftControllerPosition;
-            }
-
-            OVRInput.Controller leftController = OVRInput.Controller.LTouch;
-            OVRInput.SetControllerVibration(0, 0, leftController);
-            GameObject leftControllerObject = GameObject.Find("OculusHandController_L");
-            if (leftControllerObject != null)
-            {
-                leftControllerObject.SetActive(false);
+                visualController.SetActive(false);
             }
         }
     }
