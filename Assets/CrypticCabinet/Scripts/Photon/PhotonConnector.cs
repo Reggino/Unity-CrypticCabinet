@@ -581,11 +581,11 @@ namespace CrypticCabinet.Photon
                 // If the user clicks on the button "Back", the guest leaves the lobby.
                 UISystem.Instance.ShowMessageWithOneButton(
                     $"Even geduld...",
-                    "Back",
+                    "Stop",
                     () =>
                     {
-                        GuestLeaveLobby();
-                        ShowNetworkSelectionMenu();
+                        // GuestLeaveLobby();
+                        // ShowNetworkSelectionMenu();
                     });
                 m_guestIsInLobby = true;
             }
