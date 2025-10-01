@@ -152,7 +152,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _GlowFalloff: 100
-    - _InOut: 0.953
+    - _InOut: 0
     - _IntroOutroFadeBool: 1
     - _Max: 1.14
     - _Metallic: 0

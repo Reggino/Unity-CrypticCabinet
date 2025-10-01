@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4182386674285676329, guid: b13932f5ae5c9ae4488101b7b08f2d3e, type: 3}
       propertyPath: m_text
-      value: Lief
+      value: Wisse
       objectReference: {fileID: 0}
     - target: {fileID: 4182386674285676329, guid: b13932f5ae5c9ae4488101b7b08f2d3e, type: 3}
       propertyPath: m_fontAsset
